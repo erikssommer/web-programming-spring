@@ -2,41 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Javascript1 - Ukesoppgaver</title>
+    <title>Javascript 1 - Ukesoppgaver</title>
+    <script src="ukesoppgaver.js"></script>
 </head>
 <body>
-<p>Skriv inn en melding:
+<h1>Ukesoppgaver javascript 1</h1>
+<p>Gir store bokstaver:
     <label>
         <input onchange="tilStorBokstav(this.value)">
     </label>
 </p>
 
-<label>
-    <input onchange="skrivMelding(this.value)">
-</label>
+<p>Skriv melding:
+    <label>
+        <input onchange="skrivMelding(this.value)">
+    </label>
+</p>
 
-<label>
-    <input onchange="skrivMeldingFarget(this.value)">
-</label>
-
-<script>
-
-    //Oppgave 3
-    function skrivMelding(input) {
-        document.write(input);
-    }
-
-    //Oppgave 6
-    function skrivMeldingFarget(input) {
-        document.write(input.fontcolor("red"));
-    }
-
-    //Oppgave 7
-    function tilStorBokstav(input) {
-        document.write(input.toUpperCase());
-    }
-
-</script>
+<p>Melding blir farget rød:
+    <label>
+        <input onchange="skrivMeldingFarget(this.value)">
+    </label>
+</p>
 
 </body>
 </html>
