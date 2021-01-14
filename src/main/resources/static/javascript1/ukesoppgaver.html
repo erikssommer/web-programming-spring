@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript1 - Ukesoppgaver</title>
+</head>
+<body>
+<p>Skriv inn en melding:
+    <label>
+        <input onchange="tilStorBokstav(this.value)">
+    </label>
+</p>
+
+<label>
+    <input onchange="skrivMelding(this.value)">
+</label>
+
+<label>
+    <input onchange="skrivMeldingFarget(this.value)">
+</label>
+
+<script>
+
+    //Oppgave 3
+    function skrivMelding(input) {
+        document.write(input);
+    }
+
+    //Oppgave 6
+    function skrivMeldingFarget(input) {
+        document.write(input.fontcolor("red"));
+    }
+
+    //Oppgave 7
+    function tilStorBokstav(input) {
+        document.write(input.toUpperCase());
+    }
+
+</script>
+
+</body>
+</html>
