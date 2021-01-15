@@ -6,3 +6,8 @@ Løsningsforsalg/hjelp til oppgaver i [DATA1700-1 21V Webprogrammering](https://
     - Bli kjent med IDE, laste ned jdk
     - Opprette nytt Spring Initializr prosjekt
     - HalloVerden program i javascript
+   
+2. Javascript 1 📠
+    - Funkjsoner og variabler
+    - Hendelser
+    - Utskriftsmetoder
