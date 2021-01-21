@@ -14,3 +14,5 @@ function tilStorBokstav(input) {
 }
 
 //Melding
+
+//Melding2
