@@ -7,23 +7,54 @@
 </head>
 <body>
 <h1>Ukesoppgaver javascript 1</h1>
-<p>Gir store bokstaver:
-    <label>
-        <input onchange="tilStorBokstav(this.value)">
-    </label>
-</p>
 
+<h2>Oppgave 1</h2>
+<button onclick="heiVerden()">Klikk meg for Oppgave 1!</button>
+
+<h2>Oppgave 2</h2>
+<button onclick="heiVerdenAlert();">Klikk meg for Oppgave 2!</button>
+
+<h2>Oppgave 3</h2>
 <p>Skriv melding:
     <label>
         <input onchange="skrivMelding(this.value)">
     </label>
 </p>
 
+<h2>Oppgave 4</h2>
+<form>
+    <label>
+        <input onchange="writeAlert(this.value);" type="text" value=""/>
+    </label>
+</form>
+<h2>Oppgave 5</h2>
+<form>
+    <label>
+        <input onchange="writeConsole(this.value);" type="text" value=""/>
+    </label>
+</form>
+
+<h2>Oppgave 6</h2>
 <p>Melding blir farget rød:
     <label>
         <input onchange="skrivMeldingFarget(this.value)">
     </label>
 </p>
 
+<h2>Oppgave 7</h2>
+<p>Gir store bokstaver:
+    <label>
+        <input onchange="tilStorBokstav(this.value)">
+    </label>
+</p>
+
+<h2>Oppgave 8</h2>
+<button onclick="skrivUtEn()">Log tall 1</button>
+
+<h2>Oppgave 9</h2>
+<button onclick="tellOpp()">Tell antall click</button>
+
+<h2>Oppgave 10</h2>
+<button onclick="tellOppMelding()">Melding om antall click</button>
 </body>
 </html>
