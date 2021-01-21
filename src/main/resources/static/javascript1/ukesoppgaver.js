@@ -12,3 +12,5 @@ function skrivMeldingFarget(input) {
 function tilStorBokstav(input) {
     document.write(input.toUpperCase());
 }
+
+//Melding
