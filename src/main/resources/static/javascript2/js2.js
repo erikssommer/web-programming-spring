@@ -74,4 +74,30 @@ function visPersonRegister() {
         console.log(person.navn + " " + person.adresse + " " + person.telefonnr);
     }
 
+    console.log("");
+
+    const regpersonnr = [];
+
+    const personnr1 = {
+        navn: "Line Nilsen",
+        adresse: "Osloveien 22",
+        telefonnr: "43565872",
+        personnr: "23049858435"
+    }
+
+    const personnr2 = {
+        navn: "Ole Olsen",
+        adresse: "Trondheimsvegen 22",
+        telefonnr: "56789357",
+        personnr: "12096654762"
+    }
+
+    regpersonnr.push(personnr1, personnr2);
+
+    for (let person of regpersonnr){
+        if (person.personnr[8] % 2 === 0){
+            console.log("Jente: " + person.navn + " " + person.adresse + " " + person.telefonnr);
+        }
+    }
+
 }
