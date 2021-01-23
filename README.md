@@ -3,9 +3,9 @@ Løsningsforsalg/hjelp til oppgaver i [DATA1700-1 21V Webprogrammering](https://
 
 Deployering av repo: https://oppglfwebprogv21.herokuapp.com
 
-Klient (frontend) kode ligger i mappen /src/main/resources/static/
+Klient (frontend) kode ligger i mappen [/src/main/resources/static/](https://github.com/erikssommer/OppgLfWebProgV21/tree/master/src/main/resources/static)
 <br>
-Tjener/server (backend) kode ligger i mappen /src/main/java/
+Tjener/server (backend) kode ligger i mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/master/src/main/java)
 
 ## Emnesammendrag 📝💹🏝
 1. Introduksjon 🕹
