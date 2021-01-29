@@ -61,8 +61,8 @@ function visPersonRegister(){
             }
         }
 
-        ut += "<br /><br />";
-        ut += "Sortert liste med egen algoritme: <br />";
+        ut += "<br><br>";
+        ut += "Sortert liste med egen algoritme: <br>";
         ut += "<table><tr>" +
             "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
             "</tr>";
@@ -77,7 +77,7 @@ function visPersonRegister(){
         document.getElementById("personregister").innerHTML = ut;
     }
 
-    ut += "<br /><br />";
+    ut += "<br><br>";
     ut += "Usortert liste: <br />";
     ut += "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
@@ -102,8 +102,8 @@ function visPersonRegister(){
         return 0;
     }
 
-    ut += "<br /><br />";
-    ut += "Sortert liste: <br />";
+    ut += "<br><br>";
+    ut += "Sortert liste: <br>";
     ut += "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
         "</tr>";
@@ -117,8 +117,8 @@ function visPersonRegister(){
 
     //document.getElementById("personregister").innerHTML = ut;
 
-    ut += "<br /><br />";
-    ut += "Annenhver sort: <br />";
+    ut += "<br><br>";
+    ut += "Annenhver sort: <br>";
     ut += "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
         "</tr>";
@@ -147,8 +147,8 @@ function visPersonRegister(){
     sorterListe[3].fnr = 24462417652;
     sorterListe[4].fnr = 43628976963;
 
-    ut += "<br /><br />";
-    ut += "Menn med fet skrift: <br />";
+    ut += "<br><br>";
+    ut += "Menn med fet skrift: <br>";
     ut += "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th><th>Fødselsnummer</th>" +
         "</tr>";
