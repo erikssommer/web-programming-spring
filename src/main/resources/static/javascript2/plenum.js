@@ -15,16 +15,7 @@ function visPersonRegister(){
 
     liste.push(person1, person2);
 
-    let ut = "<table><tr>" +
-        "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
-        "</tr>";
-
-    for (let person of liste){
-        ut += "<tr>";
-        ut += "<td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td>";
-        ut += "</tr>";
-    }
-    ut += "</table>";
+    skrivUt(liste);
 
     //document.getElementById("personregister").innerHTML = ut;
 
@@ -48,47 +39,11 @@ function visPersonRegister(){
 
     liste.push(person3, person4, person5);
 
-    //sorterNavn();
-
-    function sorterNavn(){
-        for (let i = 0; i < liste.length; i++){
-            for (let j = i+1; j < liste.length; j++){
-                if (liste[i].navn > liste[j].navn){
-                    let tmp = liste[i].navn;
-                    liste[i].navn = liste[j].navn;
-                    liste[j].navn = tmp;
-                }
-            }
-        }
-
-        ut += "<br><br>";
-        ut += "Sortert liste med egen algoritme: <br>";
-        ut += "<table><tr>" +
-            "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
-            "</tr>";
-
-        for (let person of liste){
-            ut += "<tr>";
-            ut += "<td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td>";
-            ut += "</tr>";
-        }
-        ut += "</table>";
-
-        document.getElementById("personregister").innerHTML = ut;
-    }
+    //sorterNavn(liste);
 
     ut += "<br><br>";
     ut += "Usortert liste: <br />";
-    ut += "<table><tr>" +
-        "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
-        "</tr>";
-
-    for (let person of liste){
-        ut += "<tr>";
-        ut += "<td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td>";
-        ut += "</tr>";
-    }
-    ut += "</table>";
+    skrivUt(liste);
 
     const sorterListe = liste.sort(compare);
 
@@ -104,16 +59,7 @@ function visPersonRegister(){
 
     ut += "<br><br>";
     ut += "Sortert liste: <br>";
-    ut += "<table><tr>" +
-        "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
-        "</tr>";
-
-    for (let person of sorterListe){
-        ut += "<tr>";
-        ut += "<td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td>";
-        ut += "</tr>";
-    }
-    ut += "</table>";
+    skrivUt(sorterListe);
 
     //document.getElementById("personregister").innerHTML = ut;
 
@@ -171,4 +117,38 @@ function visPersonRegister(){
 
     document.getElementById("personregister").innerHTML = ut;
 
+}
+
+function sorterNavn(array){
+    for (let i = 0; i < array.length; i++){
+        for (let j = i+1; j < array.length; j++){
+            if (array[i].navn > array[j].navn){
+                let tmp = array[i].navn;
+                array[i].navn = array[j].navn;
+                array[j].navn = tmp;
+            }
+        }
+    }
+
+    ut += "<br><br>";
+    ut += "Sortert liste med egen algoritme: <br>";
+
+    skrivUt(array)
+
+    document.getElementById("personregister").innerHTML = ut;
+}
+
+let ut = "";
+
+function skrivUt(array){
+    ut += "<table><tr>" +
+        "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
+        "</tr>";
+
+    for (let person of array){
+        ut += "<tr>";
+        ut += "<td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td>";
+        ut += "</tr>";
+    }
+    ut += "</table>";
 }
