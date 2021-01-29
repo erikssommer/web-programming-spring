@@ -58,8 +58,10 @@ function visPersonRegister() {
 
     console.log("");
 
+    /*
     // Egen algoritme for sortering basert på navn. O(n^2) -> lite effektiv når listen med navn blir større.
     // Vokser eksponensielt
+
     for (let i = 0; i < personregister.length; i++) {
         for (let j = i + 1; j < personregister.length; j++) {
             if (personregister[i].navn > personregister[j].navn) {
@@ -69,6 +71,7 @@ function visPersonRegister() {
             }
         }
     }
+    */
 
     for (let person of personregister) {
         console.log(person.navn + " " + person.adresse + " " + person.telefonnr);
@@ -94,8 +97,8 @@ function visPersonRegister() {
 
     regpersonnr.push(personnr1, personnr2);
 
-    for (let person of regpersonnr){
-        if (person.personnr[8] % 2 === 0){
+    for (let person of regpersonnr) {
+        if (person.personnr[8] % 2 === 0) {
             console.log("Jente: " + person.navn + " " + person.adresse + " " + person.telefonnr);
         }
     }
