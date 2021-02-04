@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Øving</title>
+</head>
+<body>
+<label for="valg"></label><input id="valg">
+<label for="objekt"></label><input id="objekt">
+<button onclick="beregn()">Kjør</button>
+<p id="melding"></p>
+<script>
+    const liste = [];
+    const objekter = [];
+
+    function beregn(){
+        document.getElementById("melding").innerHTML = "";
+
+        //Input
+        let input = document.getElementById("valg").value;
+        document.getElementById("valg").value = "";
+
+        liste.push(input);
+
+        for (let i = 0; i < liste.length; i++) {
+            document.getElementById("melding").innerHTML += liste[i] + "<br>";
+        }
+
+        for (let tekst of liste){
+            document.getElementById("melding").innerHTML += tekst + "<br>";
+        }
+
+        //Objekter
+        const objekt1 = {
+            navn: document.getElementById("objekt").value
+        }
+
+        objekter.push(objekt1);
+
+        for (let i = 0; i < objekter.length; i++){
+            document.getElementById("melding").innerHTML += objekter[i].navn + "<br>";
+        }
+
+        for (let objekt of objekter){
+            document.getElementById("melding").innerHTML += objekt.navn + "<br>";
+        }
+    }
+</script>
+</body>
+</html>
