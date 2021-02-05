@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="js3.js"></script>
 </head>
 <body>
 <h2>Oppgave 1</h2>
@@ -48,5 +47,26 @@ Celsius:<label for="celsius"></label><input onchange="celsiusToFahrenheit(this.v
     </tr>
 </table>
 <div id="personRegister"></div>
+
+<h3>Ekstraoppgaver</h3>
+<h2>Oppgave 5</h2>
+<label for="skrivInn">Todo liste:</label>
+<input id="skrivInn" type="text" placeholder="skriv inn gjøremål" onchange="leggTilGjoremol()">
+<h3>Gjøremål</h3>
+<ul id="gjoremol"></ul>
+
+<h2>Oppgave 6</h2>
+<label for="skrivInn2">Todo liste:</label>
+<input id="skrivInn2" type="text" placeholder="skriv inn gjøremål" onchange="leggTilGjoremol2()">
+
+<h3>Gjøremål</h3>
+<ul id="uferdig"></ul>
+<ul id="ferdig"></ul>
+
+<h2>Oppgave 7</h2>
+<button onclick="skrivUtOppgaver()">Ta test!</button>
+<ul id="liste"></ul>
+
+<script src="js3.js"></script>
 </body>
 </html>
