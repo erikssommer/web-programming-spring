@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js3.js"></script>
+</head>
+<body>
+<h2>Oppgave 1</h2>
+Navn: <label for="navn"></label><input id="navn" type="text" value=""/>
+Alder: <label for="alder"></label><input id="alder" type="text" value=""/>
+<button onclick="printInfo()">Skriv ut navn og alder</button>
+<div id="output"></div>
+
+<h2>Oppgave 2</h2>
+Fahrenheit:<label for="fahrenheit"></label><input onchange="fahrenheitToCelsius(this.value)" id="fahrenheit" type="text"
+                                                  value=""/>
+Celsius:<label for="celsius"></label><input onchange="celsiusToFahrenheit(this.value)" id="celsius" type="text"
+                                            value=""/>
+
+<h2>Oppgave 3</h2>
+<label for="in_1"></label><input id="in_1" type="number" value=""/>
+<label for="in_2"></label><input id="in_2" type="number" value=""/>
+<button onclick="pluss()">+</button>
+<button onclick="minus()">-</button>
+<button onclick="gange()">*</button>
+<button onclick="dele()">/</button>
+<div id="kalk-output"></div>
+
+<h2>Oppgave 4</h2>
+<table>
+    <tr>
+        <td>Navn</td>
+        <td><label for="objNavn"></label><input type="text" id="objNavn"/></td>
+    </tr>
+    <tr>
+        <td>Adresse</td>
+        <td><label for="objAdresse"></label><input type="text" id="objAdresse"/></td>
+    </tr>
+    <tr>
+        <td>Telefonnr</td>
+        <td><label for="objTelefonnr"></label><input type="text" id="objTelefonnr"/></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="registrer()">Registrer</button>
+        </td>
+    </tr>
+</table>
+<div id="personRegister"></div>
+</body>
+</html>
