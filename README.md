@@ -22,3 +22,16 @@ Tjener/server (backend) kode ligger i mappen [/src/main/java/](https://github.co
     - Løkker
     - Arrays
     - Objekter
+   
+4. JavaScript 3 👩‍👧‍👦
+   - Input
+   - HTML-kontrollere
+      - Nedtrekkslister
+      - Radioknapper
+      - Avkrysningsbokser
+   
+5. Introduksjon til jQuery 💰
+   - Startfunksjonen
+   - Elementer og hendelser
+   
+   
