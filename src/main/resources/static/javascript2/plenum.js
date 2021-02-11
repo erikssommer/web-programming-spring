@@ -15,6 +15,12 @@ function visPersonRegister() {
         telefonnr: "69834234"
     }
 
+    const person10 = {
+        navn: document.getElementById("navn").value,
+        adresse: document.getElementById("adresse").value,
+        telefonnr: document.getElementById("telefonnr").value
+    }
+
     liste.push(person1, person2);
 
     formaterUt(liste);
