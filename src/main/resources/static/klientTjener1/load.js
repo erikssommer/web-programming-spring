@@ -4,9 +4,9 @@ $(() => {
     $("#last").click(() => {
         $.post(apiUrl + "/load", (data, status) => {
             console.log(status)
-            if (status === "success"){
+            if (status === "success") {
                 alert("Valutaene er lastet");
-            }else {
+            } else {
                 alert("Noe gikk galt, se consollen")
             }
         });

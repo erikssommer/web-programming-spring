@@ -11,10 +11,10 @@ $(() => {
         }
 
         $.get(apiUrl + "/beregnKurs", belop, nok => {
-            if (nok !== 0.0){
-                const melding = verdi + " i " + sort + " blir :" + nok + "kr";
+            if (nok !== 0.0) {
+                const melding = verdi + " i " + sort + " blir: " + nok + "kr";
                 $("#valuta").html(melding);
-            }else {
+            } else {
                 $("#valuta").html("Du skrev inn ugyldig valutasort");
             }
         });

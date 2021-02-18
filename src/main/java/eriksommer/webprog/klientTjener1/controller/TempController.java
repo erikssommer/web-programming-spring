@@ -1,6 +1,7 @@
 package eriksommer.webprog.klientTjener1.controller;
 
 import eriksommer.webprog.klientTjener1.service.TempService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/klienttjener1")
 public class TempController {
 
-    TempService service = new TempService();
+    @Autowired
+    TempService service;
 
     @GetMapping("/hentTemp")
     public int calculate(String mnd) {
