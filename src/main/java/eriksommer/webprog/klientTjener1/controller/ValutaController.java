@@ -2,6 +2,7 @@ package eriksommer.webprog.klientTjener1.controller;
 
 import eriksommer.webprog.klientTjener1.hjelpeklasser.Belop;
 import eriksommer.webprog.klientTjener1.hjelpeklasser.Valuta;
+import eriksommer.webprog.klientTjener1.service.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class ValutaController {
 
     private final ArrayList<Valuta> valutaRegister = new ArrayList<>();
+    Service service = new Service();
 
     @PostMapping("/load")
     public void load(){
@@ -28,6 +30,6 @@ public class ValutaController {
 
     @GetMapping("/beregnKurs")
     public double calculate(Belop belop){
-        return 0.0;
+        return service.beregn(valutaRegister, belop);
     }
 }
