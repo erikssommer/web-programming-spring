@@ -34,4 +34,9 @@ Tjener/server (backend) kode ligger i mappen [/src/main/java/](https://github.co
    - Startfunksjonen
    - Elementer og hendelser
    
+6. Introduksjon til klient/tjener-modellen (Spring) 🛎
+   - Første tjener program: HelloServer
+   - Kall/forespørsel fra klient til server og tilbake
+   - Overføring av objekter
+   
    
