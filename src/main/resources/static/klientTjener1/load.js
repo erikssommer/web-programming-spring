@@ -1,8 +1,6 @@
-const apiUrl = "/api/klienttjener1";
-
 $(() => {
     $("#last").click(() => {
-        $.post(apiUrl + "/load", (data, status) => {
+        $.post(apiKlinetTjener1 + "/load", (data, status) => {
             console.log(status)
             if (status === "success") {
                 alert("Valutaene er lastet");
