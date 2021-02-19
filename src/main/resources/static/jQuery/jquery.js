@@ -198,10 +198,10 @@ $(function () {
 
             oppgaveIndex++;
         }
-        ut += '<button onclick="sjekkSvar()">Sjekk svar</button>'
-        liste.innerHTML = ut;
+        ut += '<button id="sjekkSvar">Sjekk svar</button>'
+        liste.html(ut);
 
-        function sjekkSvar() {
+        $("#sjekkSvar").click(function (){
             let riktigeSvar = 0;
             for(let oppgaveIndex = 0; oppgaveIndex < oppgaver.length; oppgaveIndex++) {
                 const radioKnapper = document.querySelectorAll('[name="oppgave-' + oppgaveIndex + '"]');
@@ -219,7 +219,7 @@ $(function () {
             }
             liste.html('');
             alert(riktigeSvar + " av " + oppgaver.length + " oppgaver er riktige");
-        }
+        });
 
         function sjekkOmRiktig(oppgaveIndex, svar) {
             const oppgave = oppgaver[oppgaveIndex];
