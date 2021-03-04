@@ -1,6 +1,6 @@
 package eriksommer.webprog.klientTjener1.controller;
 
-import eriksommer.webprog.klientTjener1.hjelpeklasser.Belop;
+import eriksommer.webprog.klientTjener1.model.Belop;
 import eriksommer.webprog.klientTjener1.service.ValutaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

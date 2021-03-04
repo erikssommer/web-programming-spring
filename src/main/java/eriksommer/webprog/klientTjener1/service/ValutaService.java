@@ -1,7 +1,7 @@
 package eriksommer.webprog.klientTjener1.service;
 
-import eriksommer.webprog.klientTjener1.hjelpeklasser.Belop;
-import eriksommer.webprog.klientTjener1.hjelpeklasser.Valuta;
+import eriksommer.webprog.klientTjener1.model.Belop;
+import eriksommer.webprog.klientTjener1.model.Valuta;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

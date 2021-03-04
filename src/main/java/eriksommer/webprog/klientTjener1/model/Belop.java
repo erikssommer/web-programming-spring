@@ -1,4 +1,4 @@
-package eriksommer.webprog.klientTjener1.hjelpeklasser;
+package eriksommer.webprog.klientTjener1.model;
 
 public class Belop {
     private String sort;
