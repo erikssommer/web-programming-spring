@@ -46,7 +46,7 @@ $(() => {
 
 });
 
-const hent = () => $.get("/hentAlle", biler => formater(biler));
+const hent = () => $.get("/hent", biler => formater(biler));
 
 const inputval = motorvogn => {
     if (motorvogn.personnr === "") return false
