@@ -37,10 +37,10 @@ $(() => {
     });
 
     $("#slettAlle").click(() => {
-        $.ajax({
-            url: apiLagringServer + "/motor",
-            type: "DELETE",
-            success: () => hent()
+        $.ajax(apiLagringServer + "/motor", {
+            type: 'DELETE',
+            success: () => hent(),
+            error: (jqXhr, textStatus, errorMessage) => console.log(errorMessage)
         });
     });
 });
