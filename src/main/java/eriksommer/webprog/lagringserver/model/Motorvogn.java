@@ -1,4 +1,4 @@
-package eriksommer.webprog.lagringserver;
+package eriksommer.webprog.lagringserver.model;
 
 /**
  * An empty constructor is needed to create a new instance via reflection by
