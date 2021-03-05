@@ -16,8 +16,8 @@ $(() => {
             type: type.val()
         };
 
-        if (inputval(motorvogn)){
-            $.post("/motor", motorvogn, () => hent());
+        if (inputval(motorvogn)) {
+            $.post(apiLagringServer + "/motor", motorvogn, () => hent());
             /*
             $.post("/lagre", motorvogn, function (){
                 $.get("/hentAlle", function (biler) {
@@ -31,21 +31,21 @@ $(() => {
             kjennetegn.val("");
             merke.val("");
             type.val("");
-        }else {
+        } else {
             console.log("Mangler input");
         }
     });
 
     $("#slettAlle").click(() => {
         $.ajax({
-            url: "/motor",
+            url: apiLagringServer + "/motor",
             type: "DELETE",
             success: () => hent()
         });
     });
 });
 
-const hent = () => $.get("/motor", biler => formater(biler));
+const hent = () => $.get(apiLagringServer + "/motor", biler => formater(biler));
 
 const inputval = motorvogn => {
     if (motorvogn.personnr === "") return false
@@ -60,7 +60,7 @@ const formater = biler => {
     let ut = "<table><tr><th>Personnr</th><th>Navn</th><th>Adresse</th>" +
         "<th>Kjennetegn</th><th>Merke</th><th>Type</th></tr>";
 
-    for (let bil of biler){
+    for (let bil of biler) {
         ut += "<tr><td>" + bil.personnr + "</td><td>" + bil.navn + "</td><td>" + bil.adresse + "</td>" +
             "<td>" + bil.kjennetegn + "</td><td>" + bil.merke + "</td><td>" + bil.type + "</td></tr>";
     }
