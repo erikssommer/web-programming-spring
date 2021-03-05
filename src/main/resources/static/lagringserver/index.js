@@ -17,7 +17,7 @@ $(() => {
         };
 
         if (inputval(motorvogn)){
-            $.post("/lagre", motorvogn, () => $.get("/hentAlle", biler => formater(biler)));
+            $.post("/lagre", motorvogn, () => hent());
             /*
             $.post("/lagre", motorvogn, function (){
                 $.get("/hentAlle", function (biler) {
@@ -35,7 +35,18 @@ $(() => {
             console.log("Mangler input");
         }
     });
+
+    $("#slettAlle").click(() => {
+        $.ajax({
+            url: "/slett",
+            type: "DELETE",
+            success: () => hent()
+        });
+    });
+
 });
+
+const hent = () => $.get("/hentAlle", biler => formater(biler));
 
 const inputval = motorvogn => {
     if (motorvogn.personnr === "") return false
