@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorvognregister 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<h1>Motorvognregister</h1>
+<table>
+    <tr>
+        <td>Eiers personnummer</td>
+        <td>Eiers navn</td>
+        <td>Eiers adresse</td>
+    </tr>
+    <tr>
+        <td><label for="personnr"></label><input type="text" id="personnr"/></td>
+        <td><label for="navn"></label><input type="text" id="navn"/></td>
+        <td><label for="adresse"></label><input type="text" id="adresse"/></td>
+    </tr>
+    <tr>
+        <td>Kjennetegn</td>
+        <td>Bilmerke</td>
+        <td>Biltype</td>
+    </tr>
+    <tr>
+        <td><label for="kjennetegn"></label><input type="text" id="kjennetegn"/></td>
+        <td><label for="merke"></label><input type="text" id="merke"/></td>
+        <td><label for="type"></label><input type="text" id="type"/></td>
+    </tr>
+</table>
+<button id="regMotorvogn">Registrer</button>
+<br>
+Alle bilene:
+<div id="bilene"></div>
+<button id="slettAlle">Slett alle</button>
+<br>
+</body>
+</html>
