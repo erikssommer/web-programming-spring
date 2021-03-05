@@ -17,7 +17,7 @@ $(() => {
         };
 
         if (inputval(motorvogn)){
-            $.post("/lagre", motorvogn, () => hent());
+            $.post("/motor", motorvogn, () => hent());
             /*
             $.post("/lagre", motorvogn, function (){
                 $.get("/hentAlle", function (biler) {
@@ -38,15 +38,14 @@ $(() => {
 
     $("#slettAlle").click(() => {
         $.ajax({
-            url: "/slett",
+            url: "/motor",
             type: "DELETE",
             success: () => hent()
         });
     });
-
 });
 
-const hent = () => $.get("/hent", biler => formater(biler));
+const hent = () => $.get("/motor", biler => formater(biler));
 
 const inputval = motorvogn => {
     if (motorvogn.personnr === "") return false
