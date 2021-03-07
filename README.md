@@ -39,4 +39,9 @@ Tjener/server (backend) kode ligger i mappen [/src/main/java/](https://github.co
    - Kall/forespørsel fra klient til server og tilbake
    - Overføring av objekter
    
+7. Mer om HTTP og lagring av data på server 📚
+   - Post, get, delete (Ajax)
+   - Objektorientert programmering på server
+   - Lagring av data i Arraylist i Repository
+   
    
