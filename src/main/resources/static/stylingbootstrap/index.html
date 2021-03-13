@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorvognregister 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../apiurl.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Motorvognregister</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="personnr">Eiers Personnr</label>
+                    <input type="text" class="form-control" id="personnr"/>
+                </div>
+                <div class="form-group">
+                    <label for="navn">Eiers Navn</label>
+                    <input type="text" class="form-control" id="navn"/>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Eiers Adresse</label>
+                    <input type="text" class="form-control" id="adresse"/>
+                </div>
+                <div class="form-group">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn"/>
+                </div>
+                <div class="form-group">
+                    <label for="merke">Merke</label>
+                    <input type="text" class="form-control" id="merke"/>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <input type="text" class="form-control" id="type"/>
+                </div>
+            </form>
+            <button class="btn btn-primary" id="regMotorvogn">Registrer</button>
+            <br/>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle bilene:</h3>
+            <div id="bilene" class="table-responsive"></div>
+            <button class="btn btn-danger" id="slettAlle">Slett alle biler</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
