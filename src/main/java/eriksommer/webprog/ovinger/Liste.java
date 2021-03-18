@@ -1,5 +1,11 @@
 package eriksommer.webprog.ovinger;
 
+/**
+ * Denne koden er ikke perfekt og har sine mangler og feil.
+ * Koden ble skrevet for å forklare prinsippet med noder fremfor indekser i et array.
+ * Mer komplette datastrukturer ligger i pakken/mappen 'datastrukturer'
+ */
+
 public class Liste {
     private static class Node {
         int verdi;
