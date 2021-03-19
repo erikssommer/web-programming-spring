@@ -18,12 +18,12 @@ public class SirkelLinketListe {
         this.hale = null;
     }
 
-    public void leggTilNode(int verdi) {
+    public void leggTilNode(int verdi){
         Node node = new Node(verdi);
 
-        if (hode == null) {
+        if (hode == null){
             hode = node;
-        } else {
+        }else {
             hale.neste = node;
         }
 
@@ -31,43 +31,54 @@ public class SirkelLinketListe {
         hale.neste = hode;
     }
 
-    public boolean inneholderNode(int verdi) {
+    public boolean inneholderNode(int verdi){
         Node start = hode;
 
-        if (hode != null) {
+        if (hode != null){
             do {
-                if (start.verdi == verdi) {
+                if (start.verdi == verdi){
                     return true;
                 }
                 start = start.neste;
-            } while (start != hode);
+            }while (start != hode);
         }
         return false;
     }
 
-    public void slettNode(int verdi) {
+    public void slettNode(int verdi){
         Node currentNode = hode;
 
-        if (hode != null) {
+        if (hode != null){
             do {
                 Node nextNode = currentNode.neste;
-                if (nextNode.verdi == verdi) {
-                    if (hode == hale) {
+                if (nextNode.verdi == verdi){
+                    if (hode == hale){
                         hode = null;
                         hale = null;
-                    } else {
+                    }else {
                         currentNode.neste = nextNode.neste;
-                        if (hode == nextNode) {
+                        if (hode == nextNode){
                             hode = hode.neste;
                         }
-                        if (hale == nextNode) {
+                        if (hale == nextNode){
                             hale = currentNode;
                         }
                     }
                     break;
                 }
                 currentNode = nextNode;
-            } while (currentNode != hode);
+            }while (currentNode != hode);
+        }
+    }
+
+    public void skrivUt(){
+        Node current = hode;
+
+        if (hode != null){
+            do {
+                System.out.print(current.verdi + " ");
+                current = current.neste;
+            }while (current != hode);
         }
     }
 }
