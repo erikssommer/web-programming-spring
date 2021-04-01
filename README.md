@@ -11,7 +11,7 @@ mappen [/src/main/resources/static/](https://github.com/erikssommer/OppgLfWebPro
 Tjener/server (backend) kode ligger i
 mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/master/src/main/java)
 
-## Emnesammendrag 📝💹🏝
+## Emnesammendrag 📝
 
 1. Introduksjon 🕹
     - Bli kjent med IDE, laste ned jdk
@@ -49,14 +49,14 @@ mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/ma
     - Objektorientert programmering på server
     - Lagring av data i Arraylist i Repository
 
-8. Styling med Bootstrap
+8. Styling med Bootstrap 🎨
     - Responsiv grid
     - Classes
 
-9. Nedtrekkslister, radioknapper og avhuksbokser mot server
+9. Nedtrekkslister, radioknapper og avhuksbokser mot server ☑️
     - Dynamisk bygging av html-elementer med data fra server
 
-10. Datastrukturer og rekursjon
+10. Datastrukturer og rekursjon 🔗
     - Enkelt lenket linket liste (LinkedList)
     - Sirkulær liste
     - Stakk
@@ -64,7 +64,7 @@ mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/ma
     - Basistilfelle for rekursive metoder
     - Tårnet i hanoi
 
-11. Lagre data på server i en relasjonsdatabase 1
+11. Lagre data på server i en relasjonsdatabase 1 🏟
     - H2-database (in memory)
     - SQL setninger for insetting, sortering og uttak
    
