@@ -7,3 +7,4 @@ const apiKlinetTjener1 = "/api/klienttjener1";
 const apiLagringServer = "/api/lagringserver";
 const apiNedtrekkslister = "/api/nedtrekkslister";
 const apiRekursjon = "/api/rekursjon";
+const apiRelasjonsdatabase1 = "/api/relasjonsdatabase1"
