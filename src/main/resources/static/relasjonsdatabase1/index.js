@@ -43,7 +43,8 @@ $(() => {  // kjøres når dokumentet er ferdig lastet
 const hentAlleBiler = () => $.get(api + "/hentBiler", biler => formaterBiler(biler));
 
 const formaterBiler = biler => {
-    let ut = "<select id='valgtMerke' onchange='finnTyper()'>";
+    $("#valgtMerke").off(); //Fjerner eventlisteners på alle car objekter
+    let ut = "<select id='valgtMerke'>";
     let i = 0;
     let forrigeMerke = "";
     ut += "<option>Velg merke</option>";
@@ -55,6 +56,8 @@ const formaterBiler = biler => {
     }
     ut += "</select>";
     $("#merke").html(ut);
+
+    addEventListeners(biler, false);
 }
 
 const finnTyper = () => {
@@ -76,16 +79,33 @@ const formaterTyper = (biler, valgtMerke) => {
 const hentAlle = () => $.get(api + "/hentAlle", biler => formaterData(biler));
 
 const formaterData = biler => {
+
+    $(".car").off() //Fjerner eventlisteners på alle car objekter
+
     let ut = "<table class='table table-striped'><tr><th>Personnr</th><th>Navn</th><th>Adresse</th>" +
         "<th>Kjennetegn</th><th>Merke</th><th>Type</th><th></th></tr>";
     for (const bil of biler) {
         ut += "<tr><td>" + bil.personnr + "</td><td>" + bil.navn + "</td><td>" + bil.adresse + "</td>" +
             "<td>" + bil.kjennetegn + "</td><td>" + bil.merke + "</td><td>" + bil.type + "</td>" +
-            "<td> <button class='btn btn-danger' onclick='slettEnMotorvogn(" + bil.personnr + ")'>Slett</button></td>" +
+            "<td> <button class='btn btn-danger car' id='"+bil.personnr+"'>Slett</button></td>" +
             "</tr>";
     }
     ut += "</table>";
     $("#bilene").html(ut);
+
+    addEventListeners(biler, true)
+}
+
+const addEventListeners = (biler, type) => {
+    if (type){
+        for (const {personnr} of biler){
+            $("#" + personnr).on("click",() => slettEnMotorvogn(personnr)); // On passer bedre med off
+        }
+    }else {
+        for (const bil of biler){
+            $("#valgtMerke").on("change",() => finnTyper()); // On passer bedre med off
+        }
+    }
 }
 
 const slettEnMotorvogn = personnr => {
@@ -95,4 +115,5 @@ const slettEnMotorvogn = personnr => {
         success: () => window.location.href = "/relasjonsdatabase1/index.html",
         error: (jqXhr, textStatus, errorMessage) => console.log(errorMessage)
     });
+    $("#" + personnr).off()
 }
