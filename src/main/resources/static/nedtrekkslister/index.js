@@ -1,3 +1,5 @@
+import { apiNedtrekkslister as api} from "../apiurl.js"
+
 let biltyper = []
 let personnr, navn, adresse, kjennetegn, merke, type
 
@@ -12,23 +14,23 @@ $(() => {
     });
 
     $("#slettAlle").click(() => {
-        api.slettMotorvogner()
+        server.slettMotorvogner()
     });
 
-    api.hentBilmerker()
-    api.hentMotorvogner()
+    server.hentBilmerker()
+    server.hentMotorvogner()
 });
 
 /* Snakker med api'en */
-const api = {
-    hentMotorvogner: () => $.get(apiNedtrekkslister + "/motor", motorvogner => formater(motorvogner)),
-    opprettMotorvogn: motorvogn => $.post(apiNedtrekkslister + "/motor", motorvogn, () => api.hentMotorvogner()),
-    slettMotorvogner: () => $.ajax(apiNedtrekkslister + "/motor", {
+const server = {
+    hentMotorvogner: () => $.get(api + "/motor", motorvogner => formater(motorvogner)),
+    opprettMotorvogn: motorvogn => $.post(api + "/motor", motorvogn, () => server.hentMotorvogner()),
+    slettMotorvogner: () => $.ajax(api + "/motor", {
         type: 'DELETE',
-        success: () => api.hentMotorvogner(),
+        success: () => server.hentMotorvogner(),
         error: (jqXhr, textStatus, errorMessage) => console.log(errorMessage)
     }),
-    hentBilmerker: () => $.get(apiNedtrekkslister + "/bil", biler => fyllInnBilmerker(biler))
+    hentBilmerker: () => $.get(api + "/bil", biler => fyllInnBilmerker(biler))
 }
 
 const registrerMotorvogn = () => {
@@ -45,7 +47,7 @@ const registrerMotorvogn = () => {
     };
 
     if (inputval(motorvogn)) {
-        api.opprettMotorvogn(motorvogn)
+        server.opprettMotorvogn(motorvogn)
         resetFelter()
     } else {
         console.log("Mangler input");

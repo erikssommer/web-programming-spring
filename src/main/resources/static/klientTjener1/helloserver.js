@@ -1,9 +1,7 @@
-$(function () {
-    $("#call").click(function () {
+$(() => {
+    $("#call").click(() => {
         const url = "/helloserver?name=" + $("#name").val();
 
-        $.get(url, function (data) {
-            $("#hello").html(data);
-        });
+        $.get(url, data => $("#hello").html(data));
     });
 });

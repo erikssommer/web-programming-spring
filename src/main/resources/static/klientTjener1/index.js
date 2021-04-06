@@ -1,3 +1,5 @@
+import { apiKlinetTjener1 as api} from "../apiurl.js"
+
 $(() => {
     $("#hentBelop").click(() => {
         const sort = $("#sort").val();
@@ -8,7 +10,7 @@ $(() => {
             verdi: verdi
         }
 
-        $.get(apiKlinetTjener1 + "/beregnKurs", belop, nok => {
+        $.get(api + "/beregnKurs", belop, nok => {
             if (nok !== 0.0) {
                 const melding = verdi + " i " + sort + " blir: " + nok + "kr";
                 $("#valuta").html(melding);

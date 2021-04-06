@@ -1,3 +1,5 @@
+import { apiRelasjonsdatabase1 as api} from "../apiurl.js"
+
 $(() => {  // kjøres når dokumentet er ferdig lastet
     hentAlleBiler();
     hentAlle();
@@ -19,7 +21,7 @@ $(() => {  // kjøres når dokumentet er ferdig lastet
             type: valgtType.val(),
         };
 
-        $.post(apiRelasjonsdatabase1 + "/lagre", motorvogn, () => hentAlle());
+        $.post(api + "/lagre", motorvogn, () => hentAlle());
 
         personnr.val("");
         navn.val("");
@@ -30,7 +32,7 @@ $(() => {  // kjøres når dokumentet er ferdig lastet
     });
 
     $("#slettAlle").click(() => {
-        $.ajax(apiRelasjonsdatabase1 + "/slettAlle", {
+        $.ajax(api + "/slettAlle", {
             type: 'DELETE',
             success: () => hentAlle(),
             error: (jqXhr, textStatus, errorMessage) => console.log(errorMessage)
@@ -38,7 +40,7 @@ $(() => {  // kjøres når dokumentet er ferdig lastet
     });
 });
 
-const hentAlleBiler = () => $.get(apiRelasjonsdatabase1 + "/hentBiler", biler => formaterBiler(biler));
+const hentAlleBiler = () => $.get(api + "/hentBiler", biler => formaterBiler(biler));
 
 const formaterBiler = biler => {
     let ut = "<select id='valgtMerke' onchange='finnTyper()'>";
@@ -57,7 +59,7 @@ const formaterBiler = biler => {
 
 const finnTyper = () => {
     const valgtMerke = $("#valgtMerke").val();
-    $.get(apiRelasjonsdatabase1 + "/hentBiler", biler => formaterTyper(biler, valgtMerke))
+    $.get(api + "/hentBiler", biler => formaterTyper(biler, valgtMerke))
 }
 
 const formaterTyper = (biler, valgtMerke) => {
@@ -71,7 +73,7 @@ const formaterTyper = (biler, valgtMerke) => {
     $("#type").html(ut);
 }
 
-const hentAlle = () => $.get(apiRelasjonsdatabase1 + "/hentAlle", biler => formaterData(biler));
+const hentAlle = () => $.get(api + "/hentAlle", biler => formaterData(biler));
 
 const formaterData = biler => {
     let ut = "<table class='table table-striped'><tr><th>Personnr</th><th>Navn</th><th>Adresse</th>" +
@@ -88,7 +90,7 @@ const formaterData = biler => {
 
 const slettEnMotorvogn = personnr => {
     const url = "/slettEnMotorvogn?personnr=" + personnr;
-    $.ajax(apiRelasjonsdatabase1 + url, {
+    $.ajax(api + url, {
         type: 'DELETE',
         success: () => window.location.href = "/relasjonsdatabase1/index.html",
         error: (jqXhr, textStatus, errorMessage) => console.log(errorMessage)

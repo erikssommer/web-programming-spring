@@ -1,8 +1,10 @@
+import { apiKlinetTjener1 as api} from "../apiurl.js"
+
 $(() => {
     $("#beregn").click(() => {
         const maned = $("#maned").val();
 
-        $.get(apiKlinetTjener1 + "/hentTemp?mnd=" + maned, temp => {
+        $.get(api + "/hentTemp?mnd=" + maned, temp => {
             if (temp !== 0) {
                 $("#melding").html("Det var en gjennomsnittstemperatur " +
                     " på " + temp + " grader i " + maned);

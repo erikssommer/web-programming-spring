@@ -1,10 +1,12 @@
+import { apiKlinetTjener1 as api} from "../apiurl.js"
+
 $(() => {
     const tall1 = $("#tall1");
     const tall2 = $("#tall2");
 
     $("#pluss").click(() => {
         if (inputvalidering(tall1.val(), tall2.val())) {
-            $.get(apiKlinetTjener1 + "/pluss?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
+            $.get(api + "/pluss?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
                 $("#output").html(tall1.val() + " + " + $("#tall2").val() + " = " + sum);
             });
         } else {
@@ -14,7 +16,7 @@ $(() => {
 
     $("#minus").click(() => {
         if (inputvalidering(tall1.val(), tall2.val())) {
-            $.get(apiKlinetTjener1 + "/minus?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
+            $.get(api + "/minus?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
                 $("#output").html(tall1.val() + " - " + $("#tall2").val() + " = " + sum);
             });
         } else {
@@ -24,7 +26,7 @@ $(() => {
 
     $("#gange").click(() => {
         if (inputvalidering(tall1.val(), tall2.val())) {
-            $.get(apiKlinetTjener1 + "/gange?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
+            $.get(api + "/gange?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
                 $("#output").html(tall1.val() + " * " + $("#tall2").val() + " = " + sum);
             });
         } else {
@@ -36,7 +38,7 @@ $(() => {
         if (tall2.val() === "0") {
             $("#output").html("Du kan ikke dele på 0");
         } else if (inputvalidering(tall1.val(), tall2.val())) {
-            $.get(apiKlinetTjener1 + "/dele?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
+            $.get(api + "/dele?tall1=" + tall1.val() + "&tall2=" + tall2.val(), sum => {
                 $("#output").html(tall1.val() + " / " + $("#tall2").val() + " = " + sum);
             });
         } else {

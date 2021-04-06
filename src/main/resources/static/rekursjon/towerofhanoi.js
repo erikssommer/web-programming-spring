@@ -1,3 +1,5 @@
+import { apiRekursjon as api} from "../apiurl.js"
+
 $(() => {
     $("#solveTower").click(() => {
         const tower = {
@@ -7,7 +9,7 @@ $(() => {
             tmpRod: $("#tmpRod").val()
         };
 
-        $.post(apiRekursjon + "/hanoi", tower, () => $.get(apiRekursjon + "/hanoi", solution => format(solution)));
+        $.post(api + "/hanoi", tower, () => $.get(api + "/hanoi", solution => format(solution)));
     });
 });
 
