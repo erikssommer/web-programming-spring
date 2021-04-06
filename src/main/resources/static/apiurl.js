@@ -3,8 +3,8 @@
  * @type {string}
  */
 
-const apiKlinetTjener1 = "/api/klienttjener1";
-const apiLagringServer = "/api/lagringserver";
-const apiNedtrekkslister = "/api/nedtrekkslister";
-const apiRekursjon = "/api/rekursjon";
-const apiRelasjonsdatabase1 = "/api/relasjonsdatabase1"
+export const apiKlinetTjener1 = "/api/klienttjener1";
+export const apiLagringServer = "/api/lagringserver";
+export const apiNedtrekkslister = "/api/nedtrekkslister";
+export const apiRekursjon = "/api/rekursjon";
+export const apiRelasjonsdatabase1 = "/api/relasjonsdatabase1"
