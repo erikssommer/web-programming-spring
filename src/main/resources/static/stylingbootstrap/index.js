@@ -1,3 +1,5 @@
+import { apiLagringServer as api} from "../apiurl.js"
+
 $(() => {
     $("#regMotorvogn").click(() => {
         const personnr = $("#personnr");
@@ -17,7 +19,7 @@ $(() => {
         };
 
         if (inputval(motorvogn)) {
-            $.post(apiLagringServer + "/motor", motorvogn, () => hent());
+            $.post(api + "/motor", motorvogn, () => hent());
             /*
             $.post("/lagre", motorvogn, function (){
                 $.get("/hentAlle", function (biler) {
@@ -37,7 +39,7 @@ $(() => {
     });
 
     $("#slettAlle").click(() => {
-        $.ajax(apiLagringServer + "/motor", {
+        $.ajax(api + "/motor", {
             type: 'DELETE',
             success: () => hent(),
             error: (jqXhr, textStatus, errorMessage) => console.log(errorMessage)
@@ -45,7 +47,7 @@ $(() => {
     });
 });
 
-const hent = () => $.get(apiLagringServer + "/motor", biler => formater(biler));
+const hent = () => $.get(api + "/motor", biler => formater(biler));
 
 const inputval = motorvogn => {
     if (motorvogn.personnr === "") return false
