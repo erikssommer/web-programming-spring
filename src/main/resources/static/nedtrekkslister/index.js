@@ -86,16 +86,23 @@ const fyllInnBilmodeller = () => {
 }
 
 const fyllInnBilmerker = biler => {
+    $("#valgtMerke").off();
     biltyper = biler
     let unikeMerker =  biler.map(bil => bil.merke).filter((merke, index, array) => array.indexOf(merke) === index)
 
     // her kan vi gjøre det mer avansert med å bruke event listeners, men det er et tema for en senere dag.
     let ut = `
-    <select id="valgtMerke" onclick="fyllInnBilmodeller()" class="form-control">
+    <select id="valgtMerke" class="form-control">
         ${unikeMerker.map(merke => `<option>${merke}</option>`)}
     </select>
     `
-    $("#merke").html(ut)
+    $("#merke").html(ut);
+
+    addEventListeners(biler);
+}
+
+const addEventListeners = biler => {
+    for (const bil of biler) $("#valgtMerke").on("change",() => fyllInnBilmodeller());
 }
 
 const formater = motorvogner => {
