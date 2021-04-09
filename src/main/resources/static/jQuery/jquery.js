@@ -12,13 +12,13 @@ $(function () {
     });
 
     //Oppgave 2
-    $("#fahrenheit").change(function (){
+    $("#fahrenheit").change(function () {
         const c = (5 / 9) * (Number($("#fahrenheit").val()) - 32);
         const el = $("#celsius");
         el.val(c);
     });
 
-    $("#celsius").change(function (){
+    $("#celsius").change(function () {
         const f = (9 / 5) * Number($("#celsius").val()) + 32;
         const el = $("#fahrenheit");
         el.val(f);
@@ -106,7 +106,7 @@ $(function () {
     }
 
     //Oppgave 5
-    $("#skrivInn").change(function (){
+    $("#skrivInn").change(function () {
         let ut;
         ut = "<li>"
         ut += "<input type='checkbox'>"
@@ -118,18 +118,18 @@ $(function () {
     });
 
     //Oppgave 6
-    let uferdig= $("#uferdig");
+    let uferdig = $("#uferdig");
     let ferdig = $("#ferdig");
     let skrivInn2 = $("#skrivInn2");
 
     let id = 0;
 
-    $("#skrivInn2").change(function (){
+    skrivInn2.change(function () {
         //Inkrementer id
         id++;
         let ut;
         ut = '<li id="rad-' + id + '">'
-        ut += '<input id="sjekkboks-' + id + '" type="checkbox" onchange="veksleStatus(' + id + ')">'
+        ut += '<input id="sjekkboks-' + id + '" type="checkbox">'
         ut += "<span>" + skrivInn2.val() + "</span>"
         ut += "</li>"
 
@@ -139,21 +139,27 @@ $(function () {
         //Print gjøremål til tabell
         uferdig.append(ut);
 
-        function veksleStatus(id) {
-            //Hent raden og sjekkboksen basert på id'en
-            const sjekkbox = $("#sjekkboks-" + id);
-            const rad = $("#rad-" + id);
-
-            //Flytt raden avhengig av om sjekkboksen er sjekket
-            if (sjekkbox.is(':checked')) {
-                rad.css({'text-decoration': 'line-through'});
-                ferdig.append(rad);
-            } else {
-                rad.css({'text-decoration': 'none'});
-                uferdig.append(rad);
-            }
-        }
+        addEventListeners(id);
     });
+
+    const addEventListeners = id => {
+        $("#sjekkboks-" + id).on("change", () => veksleStatus(id));
+    }
+
+    function veksleStatus(id) {
+        //Hent raden og sjekkboksen basert på id'en
+        const sjekkbox = $("#sjekkboks-" + id);
+        const rad = $("#rad-" + id);
+
+        //Flytt raden avhengig av om sjekkboksen er sjekket
+        if (sjekkbox.is(':checked')) {
+            rad.css({'text-decoration': 'line-through'});
+            ferdig.append(rad);
+        } else {
+            rad.css({'text-decoration': 'none'});
+            uferdig.append(rad);
+        }
+    }
 
     //Oppgave 7
     const liste = $("#liste"); //document.getElementById('liste')
@@ -180,7 +186,7 @@ $(function () {
     oppgaver.push(oppgave2)
     oppgaver.push(oppgave3)
 
-    $("#skrivUtOppgaver").click(function (){
+    $("#skrivUtOppgaver").click(function () {
         let ut = "";
         let id = 0;
         let oppgaveIndex = 0;
@@ -201,9 +207,9 @@ $(function () {
         ut += '<button id="sjekkSvar">Sjekk svar</button>'
         liste.html(ut);
 
-        $("#sjekkSvar").click(function (){
+        $("#sjekkSvar").click(function () {
             let riktigeSvar = 0;
-            for(let oppgaveIndex = 0; oppgaveIndex < oppgaver.length; oppgaveIndex++) {
+            for (let oppgaveIndex = 0; oppgaveIndex < oppgaver.length; oppgaveIndex++) {
                 const radioKnapper = document.querySelectorAll('[name="oppgave-' + oppgaveIndex + '"]');
                 let svar;
                 for (let alternativ of radioKnapper) {
