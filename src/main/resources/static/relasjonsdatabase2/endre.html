@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script type="module" src="endre.js"></script>
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Motorvognregister</h1>
+            <form class="form">
+                <label for="id"></label><input type="text" id="id" hidden/>
+                <div class="form-group">
+                    <label for="personnr">Personnr</label>
+                    <input type="text" class="form-control" id="personnr"/>
+                </div>
+                <div class="form-group">
+                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" id="navn"/>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse"/>
+                </div>
+                <div class="form-group">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn"/>
+                </div>
+                <div class="form-group">
+                    <label for="merke">Merke</label>
+                    <div id="merke" class="dropdown">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <div id="type" class="dropdown">
+
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-primary" id="endreMotorvogn">Endre</button>
+            <br/>
+        </div>
+    </div>
+</div>
+<div id="feil"></div>
+</body>
+</html>
