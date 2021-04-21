@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="registrere.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Motorvognregister</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="personnr">Personnr</label>
+                    <input type="text" class="form-control" id="personnr"/>
+                    <span id="feilPersonnummer" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" id="navn"/>
+                    <span id="feilNavn" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse"/>
+                    <span id="feilAdresse" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn"/>
+                    <span id="feilKjennetegn" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="merke">Merke</label>
+                    <div id="merke" class="dropdown">
+
+                    </div>
+                    <span id="feilMerke" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <div id="type" class="dropdown">
+
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-primary" id="regMotorvogn">Registrer</button>
+            <br/>
+            <div id="feil" style="color: red"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
