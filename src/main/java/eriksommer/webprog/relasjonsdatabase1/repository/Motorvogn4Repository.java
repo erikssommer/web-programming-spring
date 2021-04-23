@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -25,11 +26,11 @@ public class Motorvogn4Repository {
                 motorvogn.getMerke(), motorvogn.getType());
     }
 
-    public List hentAlleMotorvogner() {
+    public List<Motorvogn> hentAlleMotorvogner() {
         String sql = "SELECT * FROM Motorvogn";
         List<Motorvogn> list = db.query(sql, new BeanPropertyRowMapper(Motorvogn.class));
-        list.sort(((o1, o2) -> o1.getNavn().compareTo(o2.getNavn())));
-        list.sort(((o1, o2) -> o1.getMerke().compareTo(o2.getMerke())));
+        list.sort((o1, o2) -> o1.getNavn().compareTo(o2.getNavn()));
+        list.sort(Comparator.comparing(Motorvogn::getMerke));
         return list;
     }
 
