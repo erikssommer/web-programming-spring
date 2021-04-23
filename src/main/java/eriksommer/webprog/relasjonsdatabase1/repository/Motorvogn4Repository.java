@@ -27,7 +27,10 @@ public class Motorvogn4Repository {
 
     public List hentAlleMotorvogner() {
         String sql = "SELECT * FROM Motorvogn";
-        return db.query(sql, new BeanPropertyRowMapper(Motorvogn.class));
+        List<Motorvogn> list = db.query(sql, new BeanPropertyRowMapper(Motorvogn.class));
+        list.sort(((o1, o2) -> o1.getNavn().compareTo(o2.getNavn())));
+        list.sort(((o1, o2) -> o1.getMerke().compareTo(o2.getMerke())));
+        return list;
     }
 
     public void slettEnMotorvogn(String personnr) {
