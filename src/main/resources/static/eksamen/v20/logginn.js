@@ -6,7 +6,7 @@ $(() => {
         }
 
         if (validerBrukernavn(info.epost) && validerPassord(info.passord)) {
-            $.post("/logginn", info, OK => {
+            $.post("/api/eksamen/v20/logginn", info, OK => {
                 $("#loggetInn").html("Verifisering gikk fint")
             })
         }

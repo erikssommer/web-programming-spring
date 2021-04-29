@@ -8,7 +8,7 @@ $(() => {
             passord: $("#passord").val()
         }
 
-        $.post("/langrenn", skiloper, OK => {
+        $.post("/api/eksamen/v20/langrenn", skiloper, OK => {
             if (OK) {
                 skrivUt();
             } else {
