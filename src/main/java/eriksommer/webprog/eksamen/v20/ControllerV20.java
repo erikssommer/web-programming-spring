@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @SuppressWarnings("all")
-public class Controller {
+public class ControllerV20 {
 
     @Autowired
     HttpSession session;
@@ -23,7 +23,7 @@ public class Controller {
     @Autowired
     private JdbcTemplate db;
 
-    private final Logger logger = LoggerFactory.getLogger(Controller.class);
+    private final Logger logger = LoggerFactory.getLogger(ControllerV20.class);
 
     @PostMapping("/langrenn")
     public boolean lagre(Skiloper skiloper) {
