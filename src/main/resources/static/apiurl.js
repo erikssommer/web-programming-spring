@@ -11,3 +11,4 @@ export const apiRelasjonsdatabase1 = "/api/relasjonsdatabase1";
 export const apiRelasjonsdatabase2 = "/api/relasjonsdatabase2";
 export const apiInputvalidering = "/api/inputvalidering";
 export const apiSesjoner = "/api/sesjoner";
+export const apiSikkerhet = "/api/sikkerhet";
