@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="nybruker.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Registrer bruker</h1>
+            <form class="form">
+                <input type="hidden" id="id">
+                <div class="form-group">
+                    <label for="brukernavn">Brukernavn</label>
+                    <input class="form-control" id="brukernavn" type="text">
+                    <div id="brukernavn-error" style="color: red; margin-bottom: 1rem;"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="passord">Passord</label>
+                    <input class="form-control" id="passord" type="text">
+                    <div id="navn-error" style="color: red; margin-bottom: 1rem;"></div>
+                </div>
+            </form>
+            <p id="error"></p>
+            <button class="btn btn-primary" id="registrer">Logg inn</button>
+        </div>
+    </div>
+</div>
+</body>

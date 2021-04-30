@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Logg inn</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="brukernavn">Brukernavn</label>
+                    <input type="text" class="form-control" id="brukernavn"/>
+                    <span id="feilBrukernavn" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="passord">Passord</label>
+                    <input type="password" class="form-control" id="passord"/>
+                    <span id="feilPassord" style="color: red"></span>
+                </div>
+            </form>
+            <button class="btn btn-primary" id="loggInn">Logg inn</button>
+            <button class="btn btn-primary" id="registrer">Ny bruker</button>
+            <br/><br><br>
+            <button class="btn btn-danger" id="krypterAllePassord">Krypter alle passord</button>
+            <br/>
+            <div id="feil" style="color: red"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
