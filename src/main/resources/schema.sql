@@ -90,3 +90,33 @@ CREATE TABLE Bruker8
     passord    VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
+
+-- Motorvogn9 tabeller
+
+CREATE TABLE Motorvogn9
+(
+    id         INTEGER AUTO_INCREMENT NOT NULL,
+    personnr   VARCHAR(255) NOT NULL,
+    navn       VARCHAR(255) NOT NULL,
+    adresse    VARCHAR(255) NOT NULL,
+    kjennetegn VARCHAR(255) NOT NULL,
+    merke      VARCHAR(255) NOT NULL,
+    type       VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Bil9
+(
+    id    INTEGER AUTO_INCREMENT NOT NULL,
+    merke VARCHAR(255) NOT NULL,
+    type  VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Bruker9
+(
+    id         INTEGER AUTO_INCREMENT NOT NULL,
+    brukernavn VARCHAR(255) NOT NULL,
+    passord    VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
