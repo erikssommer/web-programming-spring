@@ -68,3 +68,25 @@ mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/ma
     - H2-database (in memory)
     - SQL setninger for insetting, sortering og uttak
    
+12. Lagre data på server i en relasjonsdatabase 2 💽
+    - Feilhåndtering og logging av feilmeldinger
+    - Flere nyttige SQL-setninger
+    
+13. Inputvalidering på klinet og tjener/server
+    - Bruk og implementering av regex på klinet
+    - Bruk og implementering av regex på tjener
+    - Flytte varidering på server ut i service
+    
+14. Sesjoner
+    - "stateless" protokoll
+    - Http sessions på server
+    - Generere sessions-ID-er overførte til kilent
+    - Cookies (informasjonskapsler)
+    - Timeout
+    - Innlogging
+    
+15. Sikkerhet
+    - Kryptering av passord
+    - Dekryptering av passord
+    - Bruk av spring framework security
+    - BCrypt
