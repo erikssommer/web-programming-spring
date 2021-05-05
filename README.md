@@ -72,12 +72,12 @@ mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/ma
     - Feilhåndtering og logging av feilmeldinger
     - Flere nyttige SQL-setninger
     
-13. Inputvalidering på klinet og tjener/server
+13. Inputvalidering på klinet og tjener/server ✅
     - Bruk og implementering av regex på klinet
     - Bruk og implementering av regex på tjener
     - Flytte varidering på server ut i service
     
-14. Sesjoner
+14. Sesjoner 🍪
     - "stateless" protokoll
     - Http sessions på server
     - Generere sessions-ID-er overførte til kilent
@@ -85,7 +85,7 @@ mappen [/src/main/java/](https://github.com/erikssommer/OppgLfWebProgV21/tree/ma
     - Timeout
     - Innlogging
     
-15. Sikkerhet
+15. Sikkerhet 🔐
     - Kryptering av passord
     - Dekryptering av passord
     - Bruk av spring framework security
