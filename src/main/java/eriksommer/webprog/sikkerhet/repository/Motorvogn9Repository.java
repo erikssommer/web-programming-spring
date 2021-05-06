@@ -104,6 +104,11 @@ public class Motorvogn9Repository {
         String sql = "SELECT * FROM Bruker9 WHERE brukernavn = ?";
         try {
             List<Bruker> brukere = db.query(sql, new BeanPropertyRowMapper(Bruker.class), brukernavn);
+            // Ofte er brukernavn unikt og da holder det å bare hente inn ett objekt og ikke en liste av objekter.
+            // Det kan gjøres slik:
+            // Bruker bruker = db.queryForObject(sql, new BeanPropertyRowMapper<>(Bruker.class), bruker.getBrukernavn());
+
+
             // evt. flere med samme navn, tar første nedenfor (index = 0)
             if (brukere != null) {
                 if (kryptering.sjekkPassord(passord, brukere.get(0).getPassord())) {
