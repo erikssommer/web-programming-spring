@@ -1,4 +1,4 @@
-# OppgLfWebProgV21
+# Web programming spring
 
 Løsningsforsalg/hjelp til oppgaver
 i [DATA1700-1 21V Webprogrammering](https://student.oslomet.no/studier/-/studieinfo/emne/DATA1700/2020/HØST) ved OsloMet
