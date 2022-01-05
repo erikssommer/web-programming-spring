@@ -15,7 +15,7 @@
     <description>Project for the class webprogramming at OsloMet</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>15</java.version>
     </properties>
 
     <dependencies>
