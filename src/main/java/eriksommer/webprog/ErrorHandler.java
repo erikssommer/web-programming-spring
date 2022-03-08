@@ -14,7 +14,6 @@ public class ErrorHandler implements ErrorController {
         return "error";
     }
 
-    @Override
     public String getErrorPath() {
         return PATH;
     }
