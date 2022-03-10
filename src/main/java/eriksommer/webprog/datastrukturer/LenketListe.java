@@ -33,7 +33,27 @@ public class LenketListe {
             hale = hode = node;
         }
         hale.neste = node;
+        node.forrige = hale;
         hale = node;
+    }
+
+    public void slett(String navn) {
+        Node node = hode;
+        while (node != null) {
+            if (node.navn.equals(navn)) {
+                if (node == hode) {
+                    node.neste.forrige = null;
+                    hode = node.neste;
+                } else if (node == hale) {
+                    node.forrige.neste = null;
+                    hale = node.forrige;
+                } else {
+                    node.neste.forrige = node.forrige;
+                    node.forrige.neste = node.neste;
+                }
+            }
+            node = node.neste;
+        }
     }
 
     @Override
@@ -62,6 +82,10 @@ class Main {
         liste.add("Erik");
         liste.add("Lisa");
         liste.add("Ali");
+
+        System.out.println(liste);
+
+        liste.slett("Ali");
 
         System.out.println(liste);
     }
